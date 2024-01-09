@@ -6,7 +6,7 @@ __pycache__/
 # CPython
 *.pyc
 
-# CSV output files 
+# CSV output files
 *.csv
 dataoutputs/*.csv
 
