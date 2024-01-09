@@ -7,7 +7,8 @@ __pycache__/
 *.pyc
 
 # CSV output files 
-*.csv 
+*.csv
+dataoutputs/*.csv
 
 # Virtual environment
 venv/
