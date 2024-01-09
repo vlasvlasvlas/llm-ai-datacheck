@@ -23,9 +23,9 @@ The complexity of AI legislation, dispersed in multilingual and nuanced texts, m
 The repository's primary goal is to democratize access to crucial information in AI-related legal texts, fostering a collaborative environment where researchers, policymakers, and enthusiasts can contribute to and benefit from a collective understanding of global AI regulations.
 
 
-## Document Analysis
+## Document sources
 
-### Data (ai related documents)
+### Data (multiple ai related documents)
 
 For a comprehensive analysis, this repository examines AI related legal documents found in the `/data` directory. Users can choose any text files for analysis, and it's recommended to include the following metadata at the beginning of each document for better context:
 
@@ -41,10 +41,9 @@ DOCUMENT_URL: [URL to Document]
 
 **Note**: Currently, the content of the document should be in a UTF-8 encoded text file. Future updates may extend support for URLs or PDFs from which text extraction will be performed.
 
-### Data Check - Thematic Areas
+### Data Checks - Thematic Areas (multiple topics)
 
 Thematic Areas, located within the `/datachecks` directory, are Markdown files tailored to facilitate the analysis and search for specific content within AI-related legal documents found in the `/data` directory. Serving as structured frameworks, these thematic areas guide the understanding and categorization of information, aligning with the repository's overarching goal.
-
 
 
 ## Output Information
