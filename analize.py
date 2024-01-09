@@ -34,8 +34,7 @@ def replace_special_characters(text):
         "‘": "'",
         "’": "'",
         "```csv": "",
-        "`": "",
-        '"': "",
+        "`": ""
     }
 
     for original, replacement in replacements.items():
@@ -62,8 +61,8 @@ ai_definition = "For purposes of this study, evidence relating to AI will be und
 # Question prompt for AI
 question = """
 Kindly provide clear and concise responses to the following queries.
-Output Format: CSV UTF-8 with the following columns: answer_1_fullanswer, answer_2_yesno, answer_2_fullanswer, answer_3_yesno, answer_3_fullanswer, answer_4_yesno, answer_4_fullanswer
-- Dont forget to include the column names in the first row of the CSV file and always use quotes to enclose the answers. 
+Output Format: CSV Pipe separated UTF-8 with the following columns: answer_1_fullanswer | answer_2_yesno | answer_2_fullanswer | answer_3_yesno | answer_3_fullanswer | answer_4_yesno | answer_4_fullanswer
+- Dont forget: include the column names in the first row of the CSV file, use pipe separation (|) and always use quotes to enclose the answers. 
 - Yes/No answers (columns that ends with _yesno) must be answered with a Yes or No.
 - Full answers (columns that ends with _fullanswer) must not be cutted or truncated ensuring that these columnbased answers are complete and full extense.
 - Must return 1 row per document analyzed.
@@ -86,7 +85,7 @@ Responses should be expressed in a extense professional, precise, and neutral ma
 
 
 # Function to ask questions using OpenAI's ChatCompletion
-def ask_question(text, question):
+def ask_question(bible_prompt, text, question):
     print("asking question..")
 
     response = openai.ChatCompletion.create(
@@ -142,7 +141,7 @@ for data_file in data_files:
 
         # Bible prompt
         bible_prompt = """
-        You are working on the development of a global index of accountability in artificial intelligence. Specifically, you are analyzing specific thematic areas. Your approach must be highly serious and precise. If there is something you do not know or are not entirely clear about, you must explicitly state that you do not know. Your perspective on the topic should remain neutral. Whenever possible, provide a comprehensive context for your response. You are required to respond in Spanish with an IQ of at least 150. The following Markdown format will guide you in understanding what the thematic area entails and provide tools to identify elements of the thematic area in any document.
+        You are working on the development of a global index of accountability in artificial intelligence. Specifically, you are analyzing specific thematic areas. Your approach must be highly serious and precise. If there is something you do not know or are not entirely clear about, you must explicitly state that you do not know. Your perspective on the topic should remain neutral. Whenever possible, provide a comprehensive context for your response. You are required to respond with an IQ of at least 150. The following Markdown format will guide you in understanding what the thematic area entails and provide tools to identify elements of the thematic area in any document.
         -- BEGIN MARKDOWN RULES GUIDE -- {textcheck} -- END MARKDOWN RULES GUIDE --
         """.format(
             textcheck=textcheck
@@ -158,23 +157,25 @@ for data_file in data_files:
         )
 
         # Ask question
-        response = ask_question(text, question)
+        response = ask_question(bible_prompt, text, question)
 
         # Fix special chars
         response = replace_special_characters(response)
 
+        print("response:", response)
+        
         # Create a DataFrame from the CSV-formatted response, with comma as separator and double quotees for data
-        df_response = pd.read_csv(StringIO(response), sep=",", quotechar='"')
+        df_response = pd.read_csv(StringIO(response), sep="|", quotechar='"')
         # check dataframe
 
         # remove empty rows from df_response
         df_response = df_response.dropna(how="all")
 
         # Add additional columns
-        df_response["data_file"] = replace_special_characters(data_file)
-        df_response["data_check_file"] = replace_special_characters(data_check_file)
-        df_response["prompt"] = replace_special_characters(bible_prompt)
-        df_response["ai_model"] = replace_special_characters(ai_model)
+        df_response["data_file"] = replace_special_characters(data_file).replace('"', '')
+        df_response["data_check_file"] = replace_special_characters(data_check_file).replace('"', '')
+        df_response["prompt"] = replace_special_characters(bible_prompt).replace('"', '')
+        df_response["ai_model"] = replace_special_characters(ai_model).replace('"', '')
         df_response["date"] = pd.to_datetime("today").strftime("%Y-%m-%d %H:%M:%S")
 
         # fill df_master with df_response as one row
