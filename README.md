@@ -1,21 +1,21 @@
-# AI Document Analysis Script
+# AI Document Analysis
 
-# AI Legal Document Analysis
+## AI Legal Document Analysis
 
 Automate the analysis of AI-related legal documents with this repository. Explore diverse thematic areas within the expansive field of Artificial Intelligence (AI) legislation, including related terms like 'machine learning' or 'algorithmic modeling.' Leveraging language models, the repository extracts insights, aiming to contribute to a global index of AI accountability.
 
-Customize the analysis for AI-related legal documents, allowing users to focus on multiple user-defined thematic areas with flexibility.
+**Versatile Functionality:** Customize the analysis for AI-related legal documents, allowing users to focus on multiple user-defined thematic areas with flexibility.
 
 Explore, analyze, and advance accountability in the dynamic landscape of AI-related legalities.
 
+## Why Use This Repository?
 
-## Why? 
-
-This repository simplifies the search for specific thematic areas in extensive AI-related legal documents, addressing challenges associated with manually exploring complex global legal frameworks. By automating the analysis of diverse texts from different countries, the tool streamlines the identification of relevant information in the field of AI, providing researchers and professionals with a powerful tool to extract valuable insights from a wide range of legal documents.
+Simplify the search for specific thematic areas in extensive AI-related legal documents, addressing challenges associated with manually exploring complex global legal frameworks. By automating the analysis of diverse texts from different countries, the tool streamlines the identification of relevant information in the field of AI, providing researchers and professionals with a powerful tool to extract valuable insights from a wide range of legal documents.
 
 The complexity of AI legislation, dispersed in multilingual and nuanced texts, makes the manual search for thematic areas time-consuming and challenging. This repository, powered by language models, significantly alleviates this burden by automating the extraction of relevant content. It empowers users to efficiently identify and comprehend specific aspects of AI legislation, promoting a more accessible and accelerated understanding of global AI regulations.
 
 In essence, the repository's primary goal is to democratize access to crucial information in AI-related legal texts, fostering a collaborative environment where researchers, policymakers, and enthusiasts can contribute to and benefit from a collective understanding of global AI regulations.
+
 
 ## Document Analysis
 
@@ -36,22 +36,25 @@ DOCUMENT_URL: [URL to Document]
 
 ### Data Check - Thematic Areas
 
-Thematic Areas within the `/datachecks` directory are Markdown files designed to guide the analysis and search for specific content within the AI related legal documents located in the `/data` directory. These thematic areas provide a structured framework for understanding and categorizing information pertinent to the overarching goal of the repository. Each thematic area file may include the following sections:
+Thematic Areas, located within the `/datachecks` directory, are Markdown files tailored to facilitate the analysis and search for specific content within AI-related legal documents found in the `/data` directory. Serving as structured frameworks, these thematic areas guide the understanding and categorization of information, aligning with the repository's overarching goal.
 
-#### Definitions:
 
-This section outlines key terms and concepts relevant to the specific thematic area. It provides a clear understanding of the terminology used and establishes a foundation for interpreting information within the context of the defined themes.
 
-#### Identification:
+## Output Information
 
-The Identification section delineates the criteria and indicators used to recognize and assess relevant content within AI related legal documents. It guides users on how to identify specific elements or patterns that align with the thematic focus, ensuring a systematic and standardized approach to document analysis.
+Upon analysis, the script generates a CSV file in the `/dataoutputs` directory. The file structure includes answers to the following questions along with additional information:
 
-#### Considerations:
+1. Identify the thematic area outlined in the markdown guide for analysis.
+2. Determine if the document precisely addresses the topic of artificial intelligence, referencing the provided definition.
+3. Conclusively establish if the document addresses the identified thematic area, providing a detailed explanation.
+4. Provide a detailed explanation of how the document addresses the specified thematic area, including references to the relevant chapter and article.
 
-Considerations highlight additional factors or aspects that users should take into account when analyzing documents within the specified thematic area. These may include nuanced perspectives, potential challenges, or particular contexts that could influence the interpretation of information.
-
-These thematic areas serve as invaluable tools for researchers and analysts, offering a structured methodology to streamline the analysis of AI related legal documents related to Artificial Intelligence. By providing clear definitions, identification guidelines, and considerations, these files enhance the efficiency and accuracy of the document analysis process.
-
+Additional Columns:
+- `data_file`: Name of the analyzed data file.
+- `data_check_file`: Name of the thematic area markdown guide file.
+- `prompt`: Prompt used for analysis.
+- `ai_model`: Selected AI model for analysis.
+- `date`: Date and time of the analysis.
 
 ## Query Handling
 
