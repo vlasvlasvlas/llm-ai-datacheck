@@ -160,8 +160,8 @@ for data_file in data_files:
 # remove empty rows from df_master
 df_master = df_master.dropna(how='all')
 
-# Save df_master as CSV as output.csv
-df_master.to_csv('output.csv', index=False)
+# Save df_master as CSV in dataoutputs/ folder as output.csv with date
+df_master.to_csv('dataoutputs/output_' + pd.to_datetime('today').strftime("%Y-%m-%d") + '.csv', index=False)
 
 # show df_master results
 print("df_master:")
