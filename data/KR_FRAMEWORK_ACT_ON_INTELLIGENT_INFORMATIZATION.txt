@@ -1,4 +1,4 @@
-COUNTRY_ISO:KR 
+COUNTRY_ISO: KR 
 COUNTRY_NAME: Korea (the Republic of) / South Korea
 COUNTRY_INSTITUTE: korea legislation research institute
 DOCUMENT_URL: https://elaw.klri.re.kr/eng_mobile/viewer.do?hseq=54720&type=sogan&key=54#:~:text=The%20Government%20shall%20promote%20the,use%20of%20intelligent%20information%20services

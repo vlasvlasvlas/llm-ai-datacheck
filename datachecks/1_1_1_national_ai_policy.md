@@ -14,7 +14,7 @@ Frameworks May take the form of adopted policies, white papers, or strategies.
 Government actions may include draft policies, the establishment of governmentbodies or task teams to conduct research pertaining to AI or lead the developmentof AI-related policy, such as a department or agency within the Ministry of Scienceand Technology. Non-State Actors (NSAs) may include non-governmental
 organisations (NGOs), but also multinational corporations, private militaryorganisations, media outlets, organised ethnic groups, academic institutions, lobbygroups, labour unions or social movements, that support the development orimplementation of a national AI policy.
 
-## Examples:
+## Some Examples:
 
 ### Frameworks:
 

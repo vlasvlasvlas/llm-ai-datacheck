@@ -12,7 +12,7 @@ An impact assessment can be defined as 'a structured process for considering the
 
 This thematic area measures steps countries have taken to integrate impact assessments, including both ex-ante and ex-post impact assessments, into the design, development, use and deployment of AI technologies. In particular, evidence must account for (1) frameworks relating to impact assessments, (2) government actions to develop and/or implement impact assessments, and (3) non-state actors working to advance use of both ex-ante and ex-post impact assessments in the context of AI. Frameworks may take the form of adopted policies, white papers, or guidelines that call for the use of impact assessments for AI. Government actions may include the development of draft policies mandating the use of impact assessments in AI or the establishment of government oversight bodies, to ensure that impact assessments are being used in the roll-out of AI technologies, specifically those classified as high-risk. Non-state actors (NSAs) may include non-governmental organisations (NGOs), but also multinational corporations, private military organisations, media outlets, organised ethnic groups, academic institutions, lobby groups, labour unions or social movements working to advance use of impact assessments in AI.
 
-## Examples:
+## Some Examples:
 
 ### Frameworks:
 
