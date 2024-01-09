@@ -1,3 +1,5 @@
+<img src="README.png" alt="drawing" width="300"/>
+
 # AI Document Analysis
 
 ## AI Legal Document Analysis
