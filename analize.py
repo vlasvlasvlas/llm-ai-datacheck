@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 import openai
 import PyPDF2
-import sys 
+import sys
 import pandas as pd
 import numpy as np
 from io import StringIO
@@ -18,10 +18,11 @@ api_key = os.getenv("API_KEY")
 openai.api_key = api_key
 
 # List of AI models
-ai_models = ['gpt-3.5-turbo-1106', 'gpt-4-1106-preview']
+ai_models = ["gpt-3.5-turbo-1106", "gpt-4-1106-preview"]
 # Select AI model
 ai_model = ai_models[1]
 print("ai_model:", ai_model)
+
 
 # Function to replace special characters in text
 def replace_special_characters(text):
@@ -32,8 +33,8 @@ def replace_special_characters(text):
         "—": "--",
         "‘": "'",
         "’": "'",
-        "```csv":"",
-        "`":""
+        "```csv": "",
+        "`": "",
     }
 
     for original, replacement in replacements.items():
@@ -41,17 +42,17 @@ def replace_special_characters(text):
 
     return text
 
+
 # List of files in the 'data' folder
-data_files = os.listdir('data')
-data_checks = os.listdir('datachecks')
+data_files = os.listdir("data")
+data_checks = os.listdir("datachecks")
 
 # Filter only text files
-data_files = [file for file in data_files if file.endswith('.txt')] #as textfiles
+data_files = [file for file in data_files if file.endswith(".txt")]  # as textfiles
 print("data_files:", data_files)
 
-data_checks = [file for file in data_checks if file.endswith('.md')] #as markdown
+data_checks = [file for file in data_checks if file.endswith(".md")]  # as markdown
 print("data_checks:", data_checks)
-
 
 
 # AI definition for analysis
@@ -78,11 +79,13 @@ Please respond in fluent English and initiate your responses with a definitive a
 
 Responses should be expressed in a extense professional, precise, and neutral manner, with a particular emphasis on clarity to ensure the highest reliability and quality in your answers.
 
-""".format(ai_definition=ai_definition)
+""".format(
+    ai_definition=ai_definition
+)
+
 
 # Function to ask questions using OpenAI's ChatCompletion
 def ask_question(text, question):
-
     print("asking question..")
 
     response = openai.ChatCompletion.create(
@@ -93,30 +96,43 @@ def ask_question(text, question):
             {"role": "user", "content": question},
         ],
     )
-    
+
     return response["choices"][0]["message"]["content"].strip()
 
 
 # create empty master dataframe
-df_master = pd.DataFrame(columns=['answer_1_fullanswer', 'answer_2_yesno', 'answer_2_fullanswer', 'answer_3_yesno', 'answer_3_fullanswer', 'answer_4_yesno', 'answer_4_fullanswer','data_file', 'data_check_file', 'prompt', 'ai_model','date'])
+df_master = pd.DataFrame(
+    columns=[
+        "answer_1_fullanswer",
+        "answer_2_yesno",
+        "answer_2_fullanswer",
+        "answer_3_yesno",
+        "answer_3_fullanswer",
+        "answer_4_yesno",
+        "answer_4_fullanswer",
+        "data_file",
+        "data_check_file",
+        "prompt",
+        "ai_model",
+        "date",
+    ]
+)
 
 # Iterate over data_file in the 'data' folder
 for data_file in data_files:
-
     print("analyzing file:", data_file)
 
     # Read text from data_file
-    with open('data/' + data_file, 'r', encoding='utf-8') as f:
+    with open("data/" + data_file, "r", encoding="utf-8") as f:
         text = f.read()
     # Fix special chars
-    text = replace_special_characters(text)    
-
+    text = replace_special_characters(text)
 
     # get text from file in data_checks variable that includes list of files where i must extract the text
     for data_check_file in data_checks:
-        with open('datachecks/' + data_check_file, 'r', encoding='utf-8') as f:
+        with open("datachecks/" + data_check_file, "r", encoding="utf-8") as f:
             textcheck = f.read()
-        
+
         print("checking file:", data_check_file)
 
         # Fix special chars
@@ -126,14 +142,18 @@ for data_file in data_files:
         bible_prompt = """
         You are working on the development of a global index of accountability in artificial intelligence. Specifically, you are analyzing specific thematic areas. Your approach must be highly serious and precise. If there is something you do not know or are not entirely clear about, you must explicitly state that you do not know. Your perspective on the topic should remain neutral. Whenever possible, provide a comprehensive context for your response. You are required to respond in Spanish with an IQ of at least 150. The following Markdown format will guide you in understanding what the thematic area entails and provide tools to identify elements of the thematic area in any document.
         -- BEGIN MARKDOWN RULES GUIDE -- {textcheck} -- END MARKDOWN RULES GUIDE --
-        """.format(textcheck=textcheck)
+        """.format(
+            textcheck=textcheck
+        )
 
         # Text
         text = """
         -- BEGIN AI RELATED LEGAL DOCUMENT --
         {text}
         -- END AI RELATED LEGAL DOCUMENT --
-        """.format(text=text)
+        """.format(
+            text=text
+        )
 
         response = ask_question(text, question)
         response = replace_special_characters(response)
@@ -142,26 +162,29 @@ for data_file in data_files:
 
         # Create a DataFrame from the CSV-formatted response, with comma as separator and double quotees for data
         df_response = pd.read_csv(StringIO(response), sep=",", quotechar='"')
-        #check dataframe
+        # check dataframe
 
         # remove empty rows from df_response
-        df_response = df_response.dropna(how='all')
+        df_response = df_response.dropna(how="all")
 
         # Add additional columns
-        df_response['data_file'] = replace_special_characters(data_file)
-        df_response['data_check_file'] = replace_special_characters(data_check_file)
-        df_response['prompt'] = replace_special_characters(bible_prompt)
-        df_response['ai_model'] = replace_special_characters(ai_model)
-        df_response['date'] = pd.to_datetime('today').strftime("%Y-%m-%d %H:%M:%S")
-        
+        df_response["data_file"] = replace_special_characters(data_file)
+        df_response["data_check_file"] = replace_special_characters(data_check_file)
+        df_response["prompt"] = replace_special_characters(bible_prompt)
+        df_response["ai_model"] = replace_special_characters(ai_model)
+        df_response["date"] = pd.to_datetime("today").strftime("%Y-%m-%d %H:%M:%S")
+
         # fill df_master with df_response as one row
         df_master = pd.concat([df_master, df_response], axis=0, ignore_index=True)
 
 # remove empty rows from df_master
-df_master = df_master.dropna(how='all')
+df_master = df_master.dropna(how="all")
 
 # Save df_master as CSV in dataoutputs/ folder as output.csv with date
-df_master.to_csv('dataoutputs/output_' + pd.to_datetime('today').strftime("%Y-%m-%d") + '.csv', index=False)
+df_master.to_csv(
+    "dataoutputs/output_" + pd.to_datetime("today").strftime("%Y-%m-%d") + ".csv",
+    index=False,
+)
 
 # show df_master results
 print("df_master:")
