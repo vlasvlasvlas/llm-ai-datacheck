@@ -35,6 +35,7 @@ def replace_special_characters(text):
         "’": "'",
         "```csv": "",
         "`": "",
+        '"': "",
     }
 
     for original, replacement in replacements.items():
@@ -125,6 +126,7 @@ for data_file in data_files:
     # Read text from data_file
     with open("data/" + data_file, "r", encoding="utf-8") as f:
         text = f.read()
+
     # Fix special chars
     text = replace_special_characters(text)
 
@@ -155,10 +157,11 @@ for data_file in data_files:
             text=text
         )
 
+        # Ask question
         response = ask_question(text, question)
-        response = replace_special_characters(response)
 
-        print("response:", response)
+        # Fix special chars
+        response = replace_special_characters(response)
 
         # Create a DataFrame from the CSV-formatted response, with comma as separator and double quotees for data
         df_response = pd.read_csv(StringIO(response), sep=",", quotechar='"')
@@ -180,14 +183,14 @@ for data_file in data_files:
 # remove empty rows from df_master
 df_master = df_master.dropna(how="all")
 
-# Save df_master as CSV in dataoutputs/ folder as output.csv with date
+# Save df_master as CSV in dataoutputs/ folder as output + timestamp as yyyy-mm-dd-hh-ss + .csv
 df_master.to_csv(
-    "dataoutputs/output_" + pd.to_datetime("today").strftime("%Y-%m-%d") + ".csv",
+    "dataoutputs/output-"
+    + pd.to_datetime("today").strftime("%Y-%m-%d-%H-%M-%S")
+    + ".csv",
     index=False,
 )
 
 # show df_master results
-print("df_master:")
-print(df_master)
-
+print("df_master:", df_master)
 print("done!")
