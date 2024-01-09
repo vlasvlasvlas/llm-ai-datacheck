@@ -48,12 +48,17 @@ Thematic Areas, located within the `/datachecks` directory, are Markdown files t
 
 ## Outputs
 
-Upon analysis, the script generates a CSV file in the `/dataoutputs` directory. The file structure includes answers to the following questions along with additional information:
+Upon analysis, the script generates a CSV file in the `/dataoutputs` directory with the following format:
+
+- File Name: `output-yyyy-mm-dd-HH-MM-SS.csv` (where yyyy, mm, dd, HH, MM, SS represent the year, month, day, hour, minute, and second of the analysis).
+
+The CSV file includes answers to the following questions along with additional information:
 
 1. Identify the thematic area outlined in the markdown guide for analysis.
 2. Determine if the document precisely addresses the topic of artificial intelligence, referencing the provided definition.
 3. Conclusively establish if the document addresses the identified thematic area, providing a detailed explanation.
 4. Provide a detailed explanation of how the document addresses the specified thematic area, including references to the relevant chapter and article.
+5. Find the release date or last update date of the document.
 
 Additional Columns:
 - `data_file`: Name of the analyzed data file.
@@ -61,6 +66,7 @@ Additional Columns:
 - `prompt`: Prompt used for analysis.
 - `ai_model`: Selected AI model for analysis.
 - `date`: Date and time of the analysis.
+
 
 ## Query Handling
 

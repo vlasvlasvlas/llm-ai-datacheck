@@ -61,7 +61,7 @@ ai_definition = "For purposes of this study, evidence relating to AI will be und
 # Question prompt for AI
 question = """
 Kindly provide clear and concise responses to the following queries.
-Output Format: CSV Pipe separated UTF-8 with the following columns: answer_1_fullanswer | answer_2_yesno | answer_2_fullanswer | answer_3_yesno | answer_3_fullanswer | answer_4_yesno | answer_4_fullanswer
+Output Format: CSV Pipe separated UTF-8 with the following columns: answer_1_fullanswer | answer_2_yesno | answer_2_fullanswer | answer_3_yesno | answer_3_fullanswer | answer_4_yesno | answer_4_fullanswer | answer_5_doc_date
 - Dont forget: include the column names in the first row of the CSV file, use pipe separation (|) and always use quotes to enclose the answers. 
 - Yes/No answers (columns that ends with _yesno) must be answered with a Yes or No.
 - Full answers (columns that ends with _fullanswer) must not be cutted or truncated ensuring that these columnbased answers are complete and full extense.
@@ -76,6 +76,8 @@ Please respond in fluent English and initiate your responses with a definitive a
 3) Conclusively establish if the document specifically addresses the identified thematic area.  Always provide a detailed explanation of how the document specifically addresses the indicated thematic area outlined in the markdown rule guide.
 
 4) Provide a detailed explanation of how the document addresses the specified thematic area outlined in the markdown rule guide. Ensure your response includes specific references to the relevant chapter and article of the document.
+
+5) Find the release date or last update date of the document.
 
 Responses should be expressed in a extense professional, precise, and neutral manner, with a particular emphasis on clarity to ensure the highest reliability and quality in your answers.
 
@@ -110,6 +112,7 @@ df_master = pd.DataFrame(
         "answer_3_fullanswer",
         "answer_4_yesno",
         "answer_4_fullanswer",
+        "answer_5_doc_date",
         "data_file",
         "data_check_file",
         "prompt",
@@ -163,7 +166,7 @@ for data_file in data_files:
         response = replace_special_characters(response)
 
         print("response:", response)
-        
+
         # Create a DataFrame from the CSV-formatted response, with comma as separator and double quotees for data
         df_response = pd.read_csv(StringIO(response), sep="|", quotechar='"')
         # check dataframe
@@ -172,10 +175,10 @@ for data_file in data_files:
         df_response = df_response.dropna(how="all")
 
         # Add additional columns
-        df_response["data_file"] = replace_special_characters(data_file).replace('"', '')
-        df_response["data_check_file"] = replace_special_characters(data_check_file).replace('"', '')
-        df_response["prompt"] = replace_special_characters(bible_prompt).replace('"', '')
-        df_response["ai_model"] = replace_special_characters(ai_model).replace('"', '')
+        df_response["data_file"] = replace_special_characters(data_file).replace('"', '').replace('|', '')
+        df_response["data_check_file"] = replace_special_characters(data_check_file).replace('"', '').replace('|', '')
+        df_response["prompt"] = replace_special_characters(bible_prompt).replace('"', '').replace('|', '')
+        df_response["ai_model"] = replace_special_characters(ai_model).replace('"', '').replace('|', '')
         df_response["date"] = pd.to_datetime("today").strftime("%Y-%m-%d %H:%M:%S")
 
         # fill df_master with df_response as one row
