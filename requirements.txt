@@ -3,5 +3,6 @@ pandas
 numpy
 pypdf2
 ipython
-#openai
+#openai specific version
 openai==0.27.0
+black

@@ -1,6 +1,26 @@
-# AI Document Analysis Script\n\n## Why?
+# AI Document Analysis Script
+
+## Why?
 
 This Python script is designed to analyze legal documents related to Artificial Intelligence (AI). It utilizes a language model (replace with your preferred LLM name) to extract insights and responses to specific queries. The purpose of this script is to aid in the development of a global index of accountability in AI by examining thematic areas outlined in legal documents.
+
+
+## Legal Document Analysis
+
+The legal documents analyzed include:
+
+- **Your_Selected_Document.txt**
+
+The script is tailored to address queries outlined in the variable `pregunta`. Each response provides insights into the document's treatment of AI-related thematic areas.
+
+**Important:** 
+
+Ensure you comply with OpenAI's usage policies and guidelines when running the script.
+
+Feel free to explore and adapt the script for your specific legal document analysis needs.
+
+*Note: The script and this README assume familiarity with Python and OpenAI's GPT models.*
+
 
 ## How?
 
@@ -52,19 +72,3 @@ The script performs the following steps:
 - Constructs prompts for AI based on document content.
 - Utilizes OpenAI ChatCompletion to ask specific queries.
 - Outputs and prints the responses.
-
-## Legal Document Analysis
-
-The legal documents analyzed include:
-
-- **Your_Selected_Document.txt**
-
-The script is tailored to address queries outlined in the variable `pregunta`. Each response provides insights into the document's treatment of AI-related thematic areas.
-
-**Important:** 
-
-Ensure you comply with OpenAI's usage policies and guidelines when running the script.
-
-Feel free to explore and adapt the script for your specific legal document analysis needs.
-
-*Note: The script and this README assume familiarity with Python and OpenAI's GPT models.*
