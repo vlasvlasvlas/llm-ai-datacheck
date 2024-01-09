@@ -130,9 +130,9 @@ for data_file in data_files:
 
         # Text
         text = """
-        -- BEGIN LEGAL DOCUMENT --
+        -- BEGIN AI RELATED LEGAL DOCUMENT --
         {text}
-        -- END LEGAL DOCUMENT --
+        -- END AI RELATED LEGAL DOCUMENT --
         """.format(text=text)
 
         response = ask_question(text, question)

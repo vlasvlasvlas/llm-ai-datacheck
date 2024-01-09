@@ -2,28 +2,28 @@
 
 ## Overview
 
-Within this repository, our mission is to automate the analysis of legal documents related to Artificial Intelligence (AI), adhering to a comprehensive definition of AI as outlined in our study. This definition broadens the scope, encompassing not only documents explicitly mentioning "Artificial Intelligence" but also those referencing related activities such as 'machine learning' or 'algorithmic modeling'. Our approach recognizes these AI-driven processes as valuable evidence, ensuring a thorough examination of frameworks and materials relevant to the expansive landscape of AI.
+Within this repository, our mission is to automate the analysis of AI related legal documents related to Artificial Intelligence (AI), adhering to a comprehensive definition of AI as outlined in our study. This definition broadens the scope, encompassing not only documents explicitly mentioning "Artificial Intelligence" but also those referencing related activities such as 'machine learning' or 'algorithmic modeling'. Our approach recognizes these AI-driven processes as valuable evidence, ensuring a thorough examination of frameworks and materials relevant to the expansive landscape of AI.
 
-The repository leverages OpenAI's language model (replace with your preferred LLM name) to facilitate the extraction of insights and responses to specific queries embedded in legal documents. Our primary goal is to contribute substantively to the development of a global index of accountability in the dynamic field of AI. This initiative involves a meticulous analysis of thematic areas outlined in diverse legal documents, exploring the multifaceted dimensions of AI legislation and regulations.
+The repository leverages OpenAI's language model (replace with your preferred LLM name) to facilitate the extraction of insights and responses to specific queries embedded in AI related legal documents. Our primary goal is to contribute substantively to the development of a global index of accountability in the dynamic field of AI. This initiative involves a meticulous analysis of thematic areas outlined in diverse AI related legal documents, exploring the multifaceted dimensions of AI legislation and regulations.
 
-Users engaging with this repository can explore its versatile functionalities, tailoring them to meet their specific requirements for legal document analysis. Whether scrutinizing frameworks, policies, or legislations, the repository provides a collaborative platform for extracting nuanced insights and fostering a deeper understanding of the legal landscape surrounding AI technologies.
+Users engaging with this repository can explore its versatile functionalities, tailoring them to meet their specific requirements for AI related legal document analysis. Whether scrutinizing frameworks, policies, or legislations, the repository provides a collaborative platform for extracting nuanced insights and fostering a deeper understanding of the AI related legal landscape surrounding AI technologies.
 
 To ensure transparency and accountability, users are encouraged to follow OpenAI's usage policies and guidelines when utilizing the resources within this repository. Additionally, we welcome ongoing contributions from the community, fostering a collective effort to enhance the repository's effectiveness and relevance in the ever-evolving landscape of AI legislation and accountability.
 
 
 ## Why? 
 
-This repository serves a critical purpose in simplifying the daunting task of searching for specific thematic areas within extensive legal documents, particularly considering the global nature of AI-related legislations. By automating the analysis of diverse texts from various countries, the repository addresses the challenges associated with manually scouring through intricate legal frameworks. This initiative aims to streamline and expedite the identification of pertinent information related to Artificial Intelligence (AI), providing researchers and practitioners with a powerful tool to navigate and distill valuable insights from a wealth of legal documents.
+This repository serves a critical purpose in simplifying the daunting task of searching for specific thematic areas within extensive AI related legal documents, particularly considering the global nature of AI-related legislations. By automating the analysis of diverse texts from various countries, the repository addresses the challenges associated with manually scouring through intricate AI related legal frameworks. This initiative aims to streamline and expedite the identification of pertinent information related to Artificial Intelligence (AI), providing researchers and practitioners with a powerful tool to navigate and distill valuable insights from a wealth of AI related legal documents.
 
-The complexity of AI legislation, often dispersed across multilingual and nuanced texts, makes the manual search for thematic areas a time-consuming and challenging endeavor. This repository, powered by OpenAI's language model (replace with your preferred LLM name), significantly alleviates this burden by automating the extraction of relevant content. By doing so, it empowers users to efficiently pinpoint and comprehend specific legal aspects of AI, promoting a more accessible and accelerated understanding of global AI legislation.
+The complexity of AI legislation, often dispersed across multilingual and nuanced texts, makes the manual search for thematic areas a time-consuming and challenging endeavor. This repository, powered by OpenAI's language model (replace with your preferred LLM name), significantly alleviates this burden by automating the extraction of relevant content. By doing so, it empowers users to efficiently pinpoint and comprehend specific AI related legal aspects of AI, promoting a more accessible and accelerated understanding of global AI legislation.
 
-In essence, the repository's overarching goal is to democratize access to crucial information embedded in legal texts, fostering a collaborative environment where researchers, policymakers, and enthusiasts can contribute to and benefit from a collective understanding of AI-related regulations on a global scale.
+In essence, the repository's overarching goal is to democratize access to crucial information embedded in AI related legal texts, fostering a collaborative environment where researchers, policymakers, and enthusiasts can contribute to and benefit from a collective understanding of AI-related regulations on a global scale.
 
-## AI Document Analysis
+## Document Analysis
 
-### Data (documents)
+### Data (ai related documents)
 
-For a comprehensive analysis, this repository examines legal documents found in the `/data` directory. Users can choose any text files for analysis, and it's recommended to include the following metadata at the beginning of each document for better context:
+For a comprehensive analysis, this repository examines AI related legal documents found in the `/data` directory. Users can choose any text files for analysis, and it's recommended to include the following metadata at the beginning of each document for better context:
 
 ```plaintext
 COUNTRY_ISO: [Country Code]
@@ -38,7 +38,7 @@ DOCUMENT_URL: [URL to Document]
 
 ### Data Check - Thematic Areas
 
-Thematic Areas within the `/datachecks` directory are Markdown files designed to guide the analysis and search for specific content within the legal documents located in the `/data` directory. These thematic areas provide a structured framework for understanding and categorizing information pertinent to the overarching goal of the repository. Each thematic area file may include the following sections:
+Thematic Areas within the `/datachecks` directory are Markdown files designed to guide the analysis and search for specific content within the AI related legal documents located in the `/data` directory. These thematic areas provide a structured framework for understanding and categorizing information pertinent to the overarching goal of the repository. Each thematic area file may include the following sections:
 
 #### Definitions:
 
@@ -46,13 +46,13 @@ This section outlines key terms and concepts relevant to the specific thematic a
 
 #### Identification:
 
-The Identification section delineates the criteria and indicators used to recognize and assess relevant content within legal documents. It guides users on how to identify specific elements or patterns that align with the thematic focus, ensuring a systematic and standardized approach to document analysis.
+The Identification section delineates the criteria and indicators used to recognize and assess relevant content within AI related legal documents. It guides users on how to identify specific elements or patterns that align with the thematic focus, ensuring a systematic and standardized approach to document analysis.
 
 #### Considerations:
 
 Considerations highlight additional factors or aspects that users should take into account when analyzing documents within the specified thematic area. These may include nuanced perspectives, potential challenges, or particular contexts that could influence the interpretation of information.
 
-These thematic areas serve as invaluable tools for researchers and analysts, offering a structured methodology to streamline the analysis of legal documents related to Artificial Intelligence. By providing clear definitions, identification guidelines, and considerations, these files enhance the efficiency and accuracy of the document analysis process.
+These thematic areas serve as invaluable tools for researchers and analysts, offering a structured methodology to streamline the analysis of AI related legal documents related to Artificial Intelligence. By providing clear definitions, identification guidelines, and considerations, these files enhance the efficiency and accuracy of the document analysis process.
 
 
 ## Query Handling
