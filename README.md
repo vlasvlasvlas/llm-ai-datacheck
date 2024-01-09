@@ -39,6 +39,7 @@ DOCUMENT_URL: [URL to Document]
 ---DOCUMENT_CONTENT_END---
 ```
 
+**Note**: Currently, the content of the document should be in a UTF-8 encoded text file. Future updates may extend support for URLs or PDFs from which text extraction will be performed.
 
 ### Data Check - Thematic Areas
 
@@ -127,8 +128,11 @@ The script performs the following steps:
 
 ## TO-DO's
 
+- Allow multiple data inputs (web documents, PDFs).
+- Enable simple customization of the data output format, providing users the flexibility to choose the desired output structure.
 - Include a troubleshooting section with common issues users might encounter and solutions.
 - Highlight any security considerations or best practices, especially when dealing with sensitive AI documents.
+
 
 ## License
 
