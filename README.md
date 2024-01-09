@@ -4,7 +4,9 @@
 
 ## AI Legal Document Analysis
 
-Automate the analysis of AI-related legal documents with this repository. Explore diverse thematic areas within the expansive field of Artificial Intelligence (AI) legislation, including related terms like 'machine learning' or 'algorithmic modeling.' Leveraging language models, the repository extracts insights, aiming to contribute to a global index of AI accountability.
+Automate the analysis of AI-related legal documents with this repository. 
+
+Explore diverse thematic areas within the expansive field of Artificial Intelligence (AI) legislation, including related terms like 'machine learning' or 'algorithmic modeling.' Leveraging language models, the repository extracts insights, aiming to contribute to a global index of AI accountability.
 
 **Versatile Functionality:** Customize the analysis for AI-related legal documents, allowing users to focus on multiple user-defined thematic areas with flexibility.
 
@@ -12,11 +14,13 @@ Explore, analyze, and advance accountability in the dynamic landscape of AI-rela
 
 ## Why Use This Repository?
 
-Simplify the search for specific thematic areas in extensive AI-related legal documents, addressing challenges associated with manually exploring complex global legal frameworks. By automating the analysis of diverse texts from different countries, the tool streamlines the identification of relevant information in the field of AI, providing researchers and professionals with a powerful tool to extract valuable insights from a wide range of legal documents.
+Simplify the search for specific thematic areas in extensive AI-related legal documents, addressing challenges associated with manually exploring complex global legal frameworks. 
+
+By automating the analysis of diverse texts from different countries, the tool streamlines the identification of relevant information in the field of AI, providing researchers and professionals with a powerful tool to extract valuable insights from a wide range of legal documents.
 
 The complexity of AI legislation, dispersed in multilingual and nuanced texts, makes the manual search for thematic areas time-consuming and challenging. This repository, powered by language models, significantly alleviates this burden by automating the extraction of relevant content. It empowers users to efficiently identify and comprehend specific aspects of AI legislation, promoting a more accessible and accelerated understanding of global AI regulations.
 
-In essence, the repository's primary goal is to democratize access to crucial information in AI-related legal texts, fostering a collaborative environment where researchers, policymakers, and enthusiasts can contribute to and benefit from a collective understanding of global AI regulations.
+The repository's primary goal is to democratize access to crucial information in AI-related legal texts, fostering a collaborative environment where researchers, policymakers, and enthusiasts can contribute to and benefit from a collective understanding of global AI regulations.
 
 
 ## Document Analysis
