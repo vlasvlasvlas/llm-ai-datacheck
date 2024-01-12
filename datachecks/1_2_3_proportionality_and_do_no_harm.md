@@ -25,3 +25,7 @@ The UK government has invested £250 million in the NHS AI Lab, an initiative wh
 ### Non-state Actors
 
 The International Committee of the Red Cross (ICRC) has published a position and background paper on the use of automatic weapons systems which urges countries to ‘establish internationally agreed limits on autonomous weapon systems to ensure civilian protection, compliance with international humanitarian law, and ethical acceptability’. In particular, the ICRC recommends that countries work together to adopt a set of legally binding rules and establish various measures with relevant stakeholders at international and national level to support government initiatives that realise these measures. Meanwhile, the campaign ‘Stop Killer Robots,’ a global coalition launched in 2013 currently consisting of over 180 member civil society organisations seeking to resist ‘digital dehumanisation,' is calling for “new international law on autonomy in weapons systems” that would “ensure human control in the use of force,” thus preventing the development and deployment of fully autonomous systems.
+
+## Search Term Guidance Helper
+
+- Helpful alternative search terms may include ‘proportionality and AI,' ‘necessity and AI,' and ‘do no harm and AI’ 

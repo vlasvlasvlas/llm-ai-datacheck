@@ -27,3 +27,9 @@ The Ministry of ICT and Innovation (MINICT) and Rwanda Utilities Regulatory Agen
 ### Non-State Actors:
 
 The Digital Transformation Centre (DTC) in Rwanda is an 'innovation hub' that aimsto promote digital transformation in Rwanda by investing in digital solutions andfostering collaborative working relationships between government, the privatesector, academia and civil society organisations. Since its establishment in 2019,the DTC has supported various projects that support implementation of Rwanda's National AI Strategy, including AI literacy and digital skills programmes andpromoting knowledge sharing between the public and private sector to developtech-driven solutions to Rwanda's developmental priorities.
+
+
+## Search Term Guidance Helper
+
+- Helpful alternative search terms may include "national AI policy," "national AI strategy".
+

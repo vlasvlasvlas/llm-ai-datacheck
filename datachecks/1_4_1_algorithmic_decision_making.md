@@ -25,3 +25,9 @@ The Council of Europe engaged in a collaboration with the French Defender of Rig
 ### Non-state Actors
 
 La Quadrature du Net is a digital rights advocacy group that focuses on defending civil liberties in the digital age. They engage in policy debates, raise awareness about algorithmic decision-making, and advocate for transparency, accountability, and rights. In addition, the Internet Society France works on a range of issues, including algorithmic decision-making and promoting open standards, ethical use of AI, and the responsible development of algorithms through research, advocacy, and stakeholder engagement.
+
+
+## Search Term Guidance Helper
+
+- Helpful alternative search terms may include "algorithmic decision-making" that might provide evidence of algorithmic decision-making, "algorithmic decision-making policy," "algorithmic decision-making strategy".
+

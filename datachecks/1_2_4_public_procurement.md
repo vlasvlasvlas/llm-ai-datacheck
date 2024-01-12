@@ -27,3 +27,8 @@ In addition, the UK government has taken several steps to ensure that procuremen
 ### Non-state Actors
 
 Finally, regarding non-state actors working on issues related to the government's acquisition of AI systems, in the UK Privacy International has been advocating for the use of procurement processes that ensure that AI systems are transparent, accountable, and free from bias and discrimination. The organization has worked with government agencies to promote procurement practices that prioritize privacy, such as requiring that AI systems be subjected to independent evaluations to ensure that they respect privacy rights.
+
+
+## Search Term Guidance Helper
+
+- Helpful alternative search terms may include "AI system procurement", "procurement AI policy," "procurement AI strategy".

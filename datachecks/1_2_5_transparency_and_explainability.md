@@ -27,3 +27,8 @@ While the AI Act has yet to come into effect, significant efforts are underway t
 ### Non-state Actors
 
 Credo AI, based in the United States, is one of numerous companies specialising in governance, risk and compliance (GRC) software platforms empowering businesses to responsibly manage AI assets, offers an innovative ‘AI Governance Platform’ to help businesses “analyse, audit and manage the risks” posed by machine learning and AI systems. In November 2022, the company released the feature of new assessment and reporting capabilities to further facilitate enterprises’ compliance with regulatory obligations as well as consumer demands for “governance artifacts, reports and disclosures” around their development and use of AI with specific regard to explainability alongside fairness, robustness, security and privacy concerns.
+
+
+## Search Term Guidance Helper
+
+- Helpful alternative search terms may include ‘transparency and AI’, ‘disclosure and AI’, ‘explainable AI’, ‘explainability and AI’

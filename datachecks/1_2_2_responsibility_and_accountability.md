@@ -86,3 +86,7 @@ define the specific types of damages that would be recoverable in EU law’, and
 include clear rules on allocating liability for damages caused by AI systems across the
 value chain.’ The EPRS cited the FLI’s position paper in its latest briefing to
 parliamentary Members.
+
+## Search Term Guidance Helper
+
+- Helpful alternative search terms may include "AI responsibility", “AI accountability” , "AI responsibility law/regulation", “AI accountability law/regulation”

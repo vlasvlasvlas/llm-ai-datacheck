@@ -27,3 +27,10 @@ Under the Framework on Intelligent Informatization Act (2020), the Ministry of S
 MINBYUN – Lawyers for a Democratic Society is a non-governmental organisation based in Seoul that is composed of more than 1100 lawyers dedicated to increasing public awareness and collaborating in joint activities to protect basic human rights and attain social justice. In 2022, MINBYUN, together with a group of civil society organisations based in South Korea, made a submission to the UN High.
 
 Commissioner for Human Rights on its report entitled The right to privacy in the digital age (2022) . The report laid out its concerns with the use of AI in surveillance systems and limitations of the Framework on Intelligent Informatization Act (2020), specifically in relation to whether the Ministry of Science and ICT is sufficiently competent and independent to conduct the social impact assessments.
+
+## Search Term Guidance Helper
+
+- Helpful alternative search terms may include impact of AI technologies on the
+social, economic and environmental aspects of life.
+
+

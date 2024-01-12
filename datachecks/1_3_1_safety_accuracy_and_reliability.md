@@ -27,3 +27,9 @@ The National Institute of Advanced Industrial Science and Technology (AIST) and 
 ### Non-state Actors
 
 Fujitsu, a Japanese multinational information and communication technology (ICT) company, is one of the first Japanese companies to promote ethical AI through the establishment of its Fujitsu Group External Advisory Committee on AI Ethics. In 2022, the company established the “AI Ethics and Governance Office” which focuses on implementing measures to actively promote AI ethics through its Fujitsu Group AI Commitment, including a pledge to ‘leveraging its accumulated experience and knowledge on how to develop and constantly improve the reliability of AI”.
+
+
+## Search Term Guidance Helper
+
+- Helpful alternative search terms may include safety, accuracy and reliability of AI technologies and any risk mitigation measures that are taken. "accuracy and reliability of AI".
+

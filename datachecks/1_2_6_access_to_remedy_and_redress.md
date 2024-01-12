@@ -66,3 +66,8 @@ AIA that would ‘foreground’ human rights and in the statement, call for “[
 rights and redress for people impacted by AI systems,” including the right not to be
 subjected to non-compliant systems alongside “the right to an explanation” around AIassisted decisions “and the right to a judicial remedy.” Accordingly, the association
 published this proposed amendment in May 2022.
+
+
+## Search Term Guidance Helper
+
+- Helpful alternative search terms may include ‘redress and AI’, ‘remedy and AI’,‘algorithmic systems’, ‘automated systems’, ‘algorithmic decisions’, ‘automated decisions’.

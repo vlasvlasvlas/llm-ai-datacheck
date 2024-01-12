@@ -25,4 +25,8 @@ Responsibility for monitoring implementation and compliance with the Guidelines 
 
 ### Non-State Actors:
 
-The Brussels Privacy Hub, a global academic research centre specialising in matters related to privacy, has been engaging with policymakers, data protection regulators, NGOs and the private sector since 2014 to produce 'cutting-edge research' on important issues relating to data protection and privacy law and policy. In January 2022, the BPH published a working paper entitled 'Humans in the GDPR and AIA Governance of Automated and Algorithmic Systems: Essential Prerequisites against Abdicating Responsibilities', which calls for conceiving human intervention in automated decision-making as a procedural right rather than an individual right to ensure the appropriate governance mechanisms are in place to achieve meaningful oversight in the rollout of AI systems and tools
+The Brussels Privacy Hub, a global academic research centre specialising in matters related to privacy, has been engaging with policymakers, data protection regulators, NGOs and the private sector since 2014 to produce 'cutting-edge research' on important issues relating to data protection and privacy law and policy. In January 2022, the BPH published a working paper entitled 'Humans in the GDPR and AIA Governance of Automated and Algorithmic Systems: Essential Prerequisites against Abdicating Responsibilities', which calls for conceiving human intervention in automated decision-making as a procedural right rather than an individual right to ensure the appropriate governance mechanisms are in place to achieve meaningful oversight in the rollout of AI systems and tools.
+
+## Search Term Guidance Helper
+
+- Helpful alternative search terms may include ‘human oversight and AI’, ‘autonomy and AI’, ‘human agency and AI’, ‘human-in-the-loop’.

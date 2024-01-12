@@ -26,3 +26,8 @@ The US Senate Judiciary Subcommittee on Privacy, Technology and the Law held a s
 ### Non-state Actors
 
 The Centre of AI and Digital Policy (CAIDP), an organization based in Washington DC, filed a complaint against OpenAI stating that GPT-4 violates rules against unfair and deceptive practices, and that OpenAI’s release of AI-text generation tools like GPT-4 is biased, deceptive and poses risks to public safety. The organization highlights malicious code, tailored propaganda, and biased training data as potential threats of GPT-4. In its complaint, the CAIDP calls on the Federal Trade Commission (FTC) to halt any further commercial deployment of GPT models and require assessment of these models before any further rollouts. They also ask for a publicly accessible reporting tool, transparency and enhanced privacy measures surrounding powerful tools like the GPT-4.
+
+
+## Search Term Guidance Helper
+
+- Helpful alternative search terms may include "generative AI," “large language models," “foundational models,” and "generative AI regulation.". Mentions of "generative AI" that might provide evidence of efforts to regulate generative AI.
