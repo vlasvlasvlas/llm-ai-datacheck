@@ -7,7 +7,6 @@ import pandas as pd
 import numpy as np
 from io import StringIO
 
-
 # Load environment variables from the .env file
 # Reload the variables in your '.env' file (override the existing variables)
 load_dotenv(".env", override=True)
@@ -100,13 +99,15 @@ print("data_checks:", data_checks)
 general_prompt = """
 You are leading the development of a global AI accountability index, focusing on analyzing legal documents for insights into AI and ethics. Maintain a serious and precise approach, acknowledging uncertainties. Stay neutral in perspective, providing comprehensive context when possible. Ensure your responses reflect an IQ of at least 150. Use the provided Markdown format for thematic guidance and tools to identify key elements in law documents.
 """
-    
+
 # AI definition for analysis
 ai_definition = "For the purpose of this study, the scope of evidence pertaining to AI is expansively defined. When researchers are tasked with examining frameworks associated with AI, accepted evidence encompasses frameworks using the term 'Artificial Intelligence' for their definition. Additionally, evidence includes frameworks covering activities aligning with the aforementioned definition, irrespective of explicit use of the term 'Artificial Intelligence.' For instance, references to 'machine learning' or 'algorithmic modeling' in a document without explicit mention of 'artificial intelligence' should still be considered as evidence related to AI, given their association with AI-driven processes."
 
+# -- VERSIONS --
 # Question prompt for AI
+
+# Q-V1:
 """
-qv1:
 Output Format: CSV Pipe separated UTF-8 with the following columns HEADER: answer_1_fullanswer | answer_2_yesno | answer_2_fullanswer | answer_3_yesno | answer_3_fullanswer | answer_4_yesno | answer_4_fullanswer | answer_5_doc_date 
 - ALWAYS include the column names in the first row of the CSV file.
 - ALWAYS USE pipe (|) as the separator AND double quote delimiter (") for data.
@@ -128,7 +129,8 @@ Please respond in fluent English and initiate your responses with a definitive a
 Responses should be expressed in a extense professional, precise, and neutral manner, with a particular emphasis on clarity to ensure the highest reliability and quality in your answers.
 """
 
-# qv2:
+
+# Q-V2:
 question = """
 Kindly provide clear and concise responses to the following queries.
 Please respond in fluent English and initiate your responses with a definitive answer for each specific question:
@@ -145,9 +147,8 @@ Responses should be expressed in a professional, precise, and neutral manner, wi
 )
 
 
-
 # prompt to fix and repair a csv data file text
-
+# REFO-V1:
 """
 #refining v1:
 You are the best data analyzer and CSV fixer.
@@ -165,6 +166,7 @@ As output I only need the header and the row, you must not add anything to the r
 """
 
 # refining v2:
+# REFO-V2:
 refining_output = """
 You are the best data analyzer and CSV fixer.
 Gold rules:
@@ -182,10 +184,12 @@ Gold rules:
 As output, I only need the header and the row. You must not add anything to the response. Give your best!
 """.format()
 
-#refining v1 
-#refining_answer = "please fix the input and prepare it as the CSV i need based on the rules i gave you"
+# refining v1
+# REVA-V1
+# refining_answer = "please fix the input and prepare it as the CSV i need based on the rules i gave you"
 
-#refining v2
+# refining v2
+# REFA-V2
 refining_answer = "Please fix the input and prepare it as a CSV file based on the rules I gave you. As output, I only need the header and the row. You must not add anything to the response. Give your best! I need  100% working CSV output with 0 errors."
 
 
@@ -193,7 +197,7 @@ refining_answer = "Please fix the input and prepare it as a CSV file based on th
 def ask_question(bible_prompt, text, question):
     """
     Ask a question using OpenAI's ChatCompletion.
-    Inputs: 
+    Inputs:
         bible_prompt: The system prompt to use for the AI.
         text: The text input to use for the AI.
         question: The question to ask the AI.
@@ -233,7 +237,6 @@ df_master = pd.DataFrame(
 
 # Iterate over data_file in the 'data' folder
 for data_file in data_files:
-
     # objective: read text from data_file and ask question to AI
     print("analyzing file:", data_file)
 
@@ -260,8 +263,7 @@ for data_file in data_files:
         {general_prompt}
         -- BEGIN MARKDOWN RULES GUIDE -- {textcheck} -- END MARKDOWN RULES GUIDE --
         """.format(
-            general_prompt=general_prompt,
-            textcheck=textcheck
+            general_prompt=general_prompt, textcheck=textcheck
         )
 
         # Text
@@ -333,4 +335,3 @@ df_master.to_csv(
 
 # show df_master results
 print("df_master:", df_master)
-print("done!")
